@@ -10,6 +10,12 @@
 body {
   background-color: hsl(0, 0%, 98%);
 }
+img {
+  width: 100%;
+}
+/* .overflow {
+  overflow: hidden;
+} */
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -24,6 +30,9 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 600px;
+}
+.nav-logo img {
+  width: 100px;
 }
 
 .nav-logo ul {
@@ -52,7 +61,81 @@ nav {
   display: none;
 }
 
-/* Black color hsl(0, 0%, 8%) */
+.banner {
+  margin-bottom: 50px;
+}
+.banner .bg-banner {
+  margin: 50px 0;
+}
+
+.wd-banner {
+  text-align: center;
+  margin-top: 30px;
+}
+.wd-banner h1 {
+  font-size: 30px;
+  margin: 30px 0;
+}
+.wd-banner p {
+  font-size: 18px;
+  color: hsl(0, 0%, 41%);
+  margin: 10px auto;
+  width: 500px;
+  line-height: 2;
+}
+button {
+  color: white;
+  background: black;
+  border-radius: 10px;
+  padding: 15px 30px;
+  border: none;
+  margin: 20px 0;
+}
+
+.bg-footer span img {
+  width: 100px;
+  margin: 30px;
+}
+.bg-banner img {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .bg-banner img {
+    display: none;
+  }
+  .big-banner img {
+    width: 400px;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .wd-banner {
+    text-align: left;
+  }
+  .wd-banner p {
+    width: auto;
+  }
+
+  .bg-footer span img {
+    width: 70px;
+    margin: 30px 0;
+  }
+  .container-bc {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 490px) {
+  .wd-banner p {
+    width: 400px;
+  }
+}
 
 @media (max-width: 900px) {
   .mobile-screen {
@@ -60,15 +143,18 @@ nav {
     justify-content: space-between;
     align-items: center;
   }
+  .mobile-screen img {
+    width: 100px;
+  }
+  .mobile-screen ul li img .hamburger {
+    width: 50px;
+  }
   .rm-sc-logo {
     display: none;
   }
   .container {
     position: relative;
     padding: 10px 10px;
-  }
-  .overflow {
-    overflow: hidden;
   }
   nav {
     display: block;
